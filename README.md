@@ -37,6 +37,11 @@ maximos <- encontrar_maximos(
 - Busca picos de absorbancia en la región de 450 nm
 - Ajustar `rango_min` y `rango_max` para diferentes regiones espectrales
 
+- ### 6. Copiar datos al portapapeles
+```r
+write.table(maximos, "clipboard", sep = "\t", row.names = FALSE)
+```
+
 ### 5. Calcular diámetro de nanopartículas (aproximación de Haiss)
 ```r
 haiss <- calcular_diametro_Haiss(datos)
@@ -44,6 +49,10 @@ haiss <- calcular_diametro_Haiss(datos)
 - Aplica la relación matemática de Haiss para estimar tamaño de partículas
 - Devuelve resultados en nanómetros (nm)
 
+### 6. Copiar datos al portapapeles
+```r
+write.table(haiss, "clipboard", sep = "\t", row.names = FALSE)
+```
 ## Uso típico
 1. Copiar datos espectroscópicos (longitud onda + absorbancia) al portapapeles
 2. Ejecutar el script completo
